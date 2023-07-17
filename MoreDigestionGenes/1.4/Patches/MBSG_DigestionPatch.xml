@@ -6,4 +6,62 @@
             <li>MBSG_SturdyDigestion</li>
         </value>
     </Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/GeneDef[defName = "RobustDigestion"]/exclusionTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/GeneDef[defName = "RobustDigestion"]</xpath>
+			<value>
+				<exclusionTags>
+					<li>MBSG_Digestion</li>
+				</exclusionTags>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/GeneDef[defName = "RobustDigestion"]/exclusionTags</xpath>
+			<value>
+				<li>MBSG_Digestion</li>
+			</value>
+		</match>
+	</Operation>
+
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/GeneCategoryDef[defName="AG_FoodConsumption"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="MBSG_SturdyDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>AG_FoodConsumption</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="MBSG_FaultyDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>AG_FoodConsumption</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="MBSG_FrailDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>AG_FoodConsumption</displayCategory></value>
+                </li>
+            </operations>
+        </match>
+        <nomatch Class="PatchOperationConditional">
+            <xpath>Defs/GeneCategoryDef[defName="EBSG_Food"]</xpath>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/GeneDef[defName="MBSG_SturdyDigestion"]/displayCategory</xpath>
+                        <value><displayCategory>EBSG_Food</displayCategory></value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/GeneDef[defName="MBSG_FaultyDigestion"]/displayCategory</xpath>
+                        <value><displayCategory>EBSG_Food</displayCategory></value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/GeneDef[defName="MBSG_FrailDigestion"]/displayCategory</xpath>
+                        <value><displayCategory>EBSG_Food</displayCategory></value>
+                    </li>
+                </operations>
+            </match>
+        </nomatch>
+    </Operation>
 </Patch>
