@@ -44,24 +44,25 @@
                 </li>
             </operations>
         </match>
-        <nomatch Class="PatchOperationConditional">
-            <xpath>Defs/GeneCategoryDef[defName="EBSG_Food"]</xpath>
-            <match Class="PatchOperationSequence">
-                <operations>
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/GeneDef[defName="MBSG_SturdyDigestion"]/displayCategory</xpath>
-                        <value><displayCategory>EBSG_Food</displayCategory></value>
-                    </li>
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/GeneDef[defName="MBSG_FaultyDigestion"]/displayCategory</xpath>
-                        <value><displayCategory>EBSG_Food</displayCategory></value>
-                    </li>
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/GeneDef[defName="MBSG_FrailDigestion"]/displayCategory</xpath>
-                        <value><displayCategory>EBSG_Food</displayCategory></value>
-                    </li>
-                </operations>
-            </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.Food">
+                    <xpath>Defs/GeneDef[defName="MBSG_SturdyDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.Food">
+                    <xpath>Defs/GeneDef[defName="MBSG_FaultyDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.Food">
+                    <xpath>Defs/GeneDef[defName="MBSG_FrailDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.Food">
+                    <xpath>Defs/GeneDef[defName="RobustDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+            </operations>
         </nomatch>
     </Operation>
 </Patch>
