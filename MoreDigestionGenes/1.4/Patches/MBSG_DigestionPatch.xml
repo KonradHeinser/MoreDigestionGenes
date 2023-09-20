@@ -62,6 +62,22 @@
                     <xpath>Defs/GeneDef[defName="RobustDigestion"]/displayCategory</xpath>
                     <value><displayCategory>EBSG_Food</displayCategory></value>
                 </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.aio">
+                    <xpath>Defs/GeneDef[defName="MBSG_SturdyDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.aio">
+                    <xpath>Defs/GeneDef[defName="MBSG_FaultyDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.aio">
+                    <xpath>Defs/GeneDef[defName="MBSG_FrailDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequire="EBSG.aio">
+                    <xpath>Defs/GeneDef[defName="RobustDigestion"]/displayCategory</xpath>
+                    <value><displayCategory>EBSG_Food</displayCategory></value>
+                </li>
             </operations>
         </nomatch>
     </Operation>
