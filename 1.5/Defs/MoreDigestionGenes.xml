@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef>
+    <defName>MBSG_SturdyDigestion</defName>
+    <label>sturdy digestion</label>
+    <description>Carriers of this gene grow a multi-fold stomach, allowing them to digest raw foods more efficiently than baseline humans. They get more nutrition from raw food than most, and they are not impacted by the thought of eating raw food.</description>
+    <iconPath>UI/Icons/Genes/Gene_RobustDigestion</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>9.9</displayOrderInCategory>
+    <dontMindRawFood>true</dontMindRawFood>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <statFactors>
+      <RawNutritionFactor>1.4</RawNutritionFactor>
+    </statFactors>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>hardeater</symbol></li>
+        <li><symbol>muncher</symbol></li>
+        <li><symbol>grubber</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>eat</symbol></li>
+        <li><symbol>raw</symbol></li>
+        <li><symbol>quad</symbol></li>
+        <li><symbol>moo</symbol></li>
+        <li><symbol>raw</symbol></li>
+        <li><symbol>munch</symbol></li>
+        <li><symbol>cow</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>eater</symbol></li>
+        <li><symbol>mouth</symbol></li>
+        <li><symbol>vore</symbol></li>
+        <li><symbol>munch</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>MBSG_FaultyDigestion</defName>
+    <label>faulty digestion</label>
+    <description>Carriers of this gene have a stomach that has issues processing foods, and as a result they cannot process non-cooked foods as well.</description>
+    <iconPath>MBSG/Gene_FaultyDigestion</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>9.8</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <statFactors>
+      <RawNutritionFactor>0.6</RawNutritionFactor>
+    </statFactors>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>softeater</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>eat</symbol></li>
+        <li><symbol>cooked</symbol></li>
+        <li><symbol>processed</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>faster</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>MBSG_FrailDigestion</defName>
+    <label>frail digestion</label>
+    <description>Carriers of this gene have a stomach that has issues processing foods, and as a result they are almost incapable of processing non-cooked foods.</description>
+    <iconPath>MBSG/Gene_FaultyDigestion</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>9.7</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>2</biostatMet>
+    <statFactors>
+      <RawNutritionFactor>0.2</RawNutritionFactor>
+    </statFactors>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>softeater</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>eat</symbol></li>
+        <li><symbol>cooked</symbol></li>
+        <li><symbol>processed</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>faster</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+</Defs>
